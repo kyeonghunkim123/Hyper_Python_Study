@@ -23,16 +23,25 @@ class Answer(models.Model):
 # KKH 추가 230427 시작
 class Question1():
     def __init__(self, **kwarg):
-        self.id = kwarg['id']
-        self.subject = kwarg['subject']
-        self.content = kwarg['content']
-        self.create_date = kwarg['create_date']
+        self.id = kwarg.get('id')
+        self.subject = kwarg.get('subject')
+        self.content = kwarg.get('content')
+        self.create_date = kwarg.get('create_date')
+        # self.id3 = kwarg.get('id3')
+
+class Question2(models.Model):
+    id = None
+    subject = None
+    content = None
+    create_date= None
+    def __str__(self):
+        return self.subject
 
 
 class Answer1():
     def __init__(self, **kwarg):
-        self.question = kwarg['question']
-        self.content = kwarg['content']
-        self.create_date = kwarg['create_date']
+        self.question = kwarg.get('question')
+        self.content = kwarg.get('content')
+        self.create_date = kwarg.get('create_date')
 
 # KKH 추가 230427 끝
