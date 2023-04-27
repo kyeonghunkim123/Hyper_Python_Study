@@ -16,4 +16,23 @@ class Answer(models.Model):
 
 
 
+
+
 # Create your models here.
+
+# KKH 추가 230427 시작
+class Question1():
+    def __init__(self, **kwarg):
+        self.id = kwarg['id']
+        self.subject = kwarg['subject']
+        self.content = kwarg['content']
+        self.create_date = kwarg['create_date']
+
+
+class Answer1():
+    def __init__(self, **kwarg):
+        self.question = kwarg['question']
+        self.content = kwarg['content']
+        self.create_date = kwarg['create_date']
+
+# KKH 추가 230427 끝
