@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
-
 {% block content %}
 <div class="container">
     <h5 class="my-3 border-bottom pb-2">질문등록</h5>
     <form method="post">
+    <!-- <form method="post" action="{% url 'pybo:question_create' %}"> -->
         {% csrf_token %}
+        <!-- {{ form.as_p }} -->
         <!-- 오류표시 Start -->
         {% if form.errors %}
         <div class="alert alert-danger" role="alert">

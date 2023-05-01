@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*3%wdb&)aqu5@qg9ao_19v$@4kse6y^8@xn108@%&i%%9fn@$3'
+SECRET_KEY = 'f$lm%lvrt!@62h+$p=_cxqu21h$*auv-!aj)%4e&jb5lkg5c(+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -105,11 +105,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
+#LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'ko-kr'
-# LANGUAGE_CODE = 'en-us'
 
+#TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Seoul'
-# TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -121,15 +121,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-
 
 # 로그인 성공후 이동하는 URL
 LOGIN_REDIRECT_URL = '/'
 
 # 로그아웃시 이동하는 URL
 LOGOUT_REDIRECT_URL = '/'
-
