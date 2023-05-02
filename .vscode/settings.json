@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/1538df36-db63-4a69-aaa8-6d17c49963d7/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/codegod-mysitetest-123",
+    "appService.deploySubpath": "."
+}
