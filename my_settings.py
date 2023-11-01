@@ -22,5 +22,6 @@ DATABASES = {
 }
 
 
+
 SECRET_KEY ='f$lm%lvrt!@62h+$p=_cxqu21h$*auv-!aj)%4e&jb5lkg5c(+'
 

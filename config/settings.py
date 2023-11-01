@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-# -- kkh mysql 관련 세팅 2023.05.01 추가 시작 --
+# -- kkh mysql 관련 세팅 2024.01.01 추가 시작 --
 # SECRET_KEY = 'f$lm%lvrt!@62h+$p=_cxqu21h$*auv-!aj)%4e&jb5lkg5c(+'
-# -- kkh mysql 관련 세팅 2023.05.01 추가 끝 --
+# -- kkh mysql 관련 세팅 2024.01.01 추가 끝 --
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -77,7 +77,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# -- kkh mysql 관련 세팅 2023.05.01 추가 시작 --
+# -- kkh db sqlite 관련 세팅 2023.11.02 추가 시작 --
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -88,9 +88,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
-DATABASES = my_settings.DATABASES
+# DATABASES = my_settings.DATABASES
 SECRET_KEY = my_settings.SECRET_KEY
-# -- kkh mysql 관련 세팅 2023.05.01 추가 끝 --
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+# -- kkh db sqlite 관련 세팅 2023.11.02 추가 끝 --
 
 
 # Password validation
